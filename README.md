@@ -2,6 +2,10 @@
 
 Copy selected rows as Markdown. It's so easy to paste in GitHub issue.
 
+## Requirement
+* [Sequel Pro](http://www.sequelpro.com/)
+* >= PHP5.6
+
 ## Installation
 1. Clone this. `git clone git@github.com:hypermkt/CopyAsMarkdownForSequelProBundle.git`
 1. Double-Click `copyAsMarkdown.spBundle`.
