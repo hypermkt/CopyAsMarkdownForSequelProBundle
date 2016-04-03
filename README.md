@@ -12,7 +12,7 @@ Copy selected rows as Markdown. It's so easy to paste in GitHub issue.
 
 ## Usage
 1. Right-Click on selected rows.
-1. Select 'Bundle > copyAs > copyAsMarkdown'.
+1. Select `Bundle > copyAs > copyAsMarkdown`.
 1. Paste it!
 
 ### Click!
