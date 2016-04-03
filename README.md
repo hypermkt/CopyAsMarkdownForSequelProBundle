@@ -11,6 +11,18 @@ Copy selected rows as Markdown. It's so easy to paste in GitHub issue.
 1. Select 'Bundle > copyAs > copyAsMarkdown'.
 1. Paste it!
 
+### Click!
+![](./img/copy_as_markdown.png)
+
+### Paste!
+```
+id|method|accessed_at
+---|---|---
+15207807|GET|2016-01-25 00:00:00
+15207808|GET|2016-01-25 00:00:00
+15207811|GET|2016-01-25 00:00:01
+```
+
 ## License
 
 This software is released under the MIT License, see LICENSE.txt.
