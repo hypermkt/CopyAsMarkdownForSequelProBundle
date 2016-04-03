@@ -10,3 +10,7 @@ Copy selected rows as Markdown. It's so easy to paste in GitHub issue.
 1. Right-Click on selected rows.
 1. Select 'Bundle > copyAs > copyAsMarkdown'.
 1. Paste it!
+
+## License
+
+This software is released under the MIT License, see LICENSE.txt.
