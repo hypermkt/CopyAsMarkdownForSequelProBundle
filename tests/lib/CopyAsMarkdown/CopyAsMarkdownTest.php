@@ -1,23 +1,14 @@
 <?php
 
+require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/lib/CopyAsMarkdown/CopyAsMarkdown.php';
+
 class CopyAsMarkdownTest extends PHPUnit_Framework_TestCase
 {
   protected $copyAsMarkdown;
 
   public function setUp()
   {
-    $this->copyAsMarkdown = new CopyAsMarkdownExtended();
-  }
-
-  public function testConvert()
-  {
-    $expected = 'hoge|fuga
----|---
-1|2';
-    $this->assertEquals($expected, $this->copyAsMarkdown->convert(array(
-          array('hoge', 'fuga'),
-          array('1', '2')
-        )));
+    $this->copyAsMarkdown = new CopyAsMarkdownExtended('hoge');
   }
 
   public function testCreateHeaderRows()
@@ -44,7 +35,7 @@ d|e|f';
   }
 }
 
-class CopyAsMarkdownExtended extends \CopyAsMarkdown\CopyAsMarkdown
+class CopyAsMarkdownExtended extends CopyAsMarkdown
 {
   public function createHeaderRows(array $rows)
   {
