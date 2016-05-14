@@ -81,7 +81,7 @@ class CopyAsMarkdown
         if (!empty($str)) {
           $str .= "|";
         }
-        $str .= $val;
+        $str .= str_replace(array("\n", "\r"), '', nl2br($val));
       }
       $result[] = $str;
     }

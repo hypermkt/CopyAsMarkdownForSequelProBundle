@@ -33,6 +33,16 @@ d|e|f';
           array('d', 'e', 'f'),
         )));
   }
+
+  public function testCreateDataRows_ReturnLineFeedRemovedData_WhenHasLineFeedInData()
+  {
+    $expected = 'a|b1<br />b2<br />b3|c';
+    $this->assertEquals($expected, $this->copyAsMarkdown->createDataRows(array(
+          array('a', 'b1
+b2
+b3', 'c'),
+        )));
+  }
 }
 
 class CopyAsMarkdownExtended extends CopyAsMarkdown
