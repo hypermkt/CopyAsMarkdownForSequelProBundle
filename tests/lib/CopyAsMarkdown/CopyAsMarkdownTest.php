@@ -63,16 +63,16 @@ class CopyAsMarkdownExtended extends CopyAsMarkdown
 {
     public function createHeaderRows(array $rows)
     {
-        return $this->_createHeaderRows($rows);
+        return parent::createHeaderRows($rows);
     }
 
     public function calculateColumnCount(array $rows)
     {
-        return $this->_calculateColumnCount($rows);
+        return parent::calculateColumnCount($rows);
     }
 
     public function createDataRows(array $rows)
     {
-        return $this->_createDataRows($rows);
+        return parent::createDataRows($rows);
     }
 }

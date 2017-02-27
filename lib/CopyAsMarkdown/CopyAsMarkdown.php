@@ -28,15 +28,15 @@ class CopyAsMarkdown
 
     protected function convert(array $rows)
     {
-        $this->columnCount = $this->_calculateColumnCount($rows);
+        $this->columnCount = $this->calculateColumnCount($rows);
         $columns = array_shift($rows);
         $result = [];
-        $result[] = $this->_createHeaderRows($columns);
-        $result[] = $this->_createDataRows($rows);
+        $result[] = $this->createHeaderRows($columns);
+        $result[] = $this->createDataRows($rows);
         return implode("\n", $result);
     }
 
-    protected function _createHeaderRows(array $columns)
+    protected function createHeaderRows(array $columns)
     {
         $result = [];
         $str = '';
@@ -54,7 +54,7 @@ class CopyAsMarkdown
         return implode("\n", $result);
     }
 
-    protected function _calculateColumnCount(array $rows)
+    protected function calculateColumnCount(array $rows)
     {
         $count = 0;
         foreach ($rows as $row) {
@@ -66,7 +66,7 @@ class CopyAsMarkdown
         return $count;
     }
 
-    protected function _createDataRows(array $rows)
+    protected function createDataRows(array $rows)
     {
         $result = [];
         foreach ($rows as $row) {
