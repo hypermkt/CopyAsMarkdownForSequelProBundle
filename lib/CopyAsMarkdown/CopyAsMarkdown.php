@@ -8,8 +8,8 @@ if (!isset($_ENV['TEST_ENV'])) {
 
 class CopyAsMarkdown
 {
-    protected $_output;
-    protected $_columnCount;
+    protected $output;
+    protected $columnCount;
 
     public function exec($stdin)
     {
@@ -28,7 +28,7 @@ class CopyAsMarkdown
 
     protected function convert(array $rows)
     {
-        $this->_columnCount = $this->_calculateColumnCount($rows);
+        $this->columnCount = $this->_calculateColumnCount($rows);
         $columns = array_shift($rows);
         $result = [];
         $result[] = $this->_createHeaderRows($columns);
