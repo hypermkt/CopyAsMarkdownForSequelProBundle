@@ -13,11 +13,17 @@ class CopyAsMarkdownTest extends PHPUnit_Framework_TestCase
 
   public function testCreateHeaderRows()
   {
-    $expected = 'hoge|fuga
----|---';
+    $expected = '|hoge|fuga
+|---|---';
     $this->assertEquals($expected, $this->copyAsMarkdown->createHeaderRows(array('hoge', 'fuga')));
   }
 
+  public function testCreateHeaderRows_WhenHasOneColumn()
+  {
+    $expected = '|hoge
+|---';
+    $this->assertEquals($expected, $this->copyAsMarkdown->createHeaderRows(array('hoge')));
+  }
 
   public function testCalculateColumnCount()
   {
@@ -26,17 +32,25 @@ class CopyAsMarkdownTest extends PHPUnit_Framework_TestCase
 
   public function testCreateDataRows()
   {
-    $expected = 'a|b|c
-d|e|f';
+    $expected = '|a|b|c
+|d|e|f';
     $this->assertEquals($expected, $this->copyAsMarkdown->createDataRows(array(
           array('a', 'b', 'c'),
           array('d', 'e', 'f'),
         )));
   }
 
+  public function testCreateDataRows_WhenHasOneColumn()
+  {
+    $expected = '|a';
+    $this->assertEquals($expected, $this->copyAsMarkdown->createDataRows(array(
+          array('a'),
+        )));
+  }
+
   public function testCreateDataRows_ReturnLineFeedRemovedData_WhenHasLineFeedInData()
   {
-    $expected = 'a|b1<br />b2<br />b3|c';
+    $expected = '|a|b1<br />b2<br />b3|c';
     $this->assertEquals($expected, $this->copyAsMarkdown->createDataRows(array(
           array('a', 'b1
 b2
