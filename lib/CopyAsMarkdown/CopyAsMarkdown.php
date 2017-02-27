@@ -41,19 +41,13 @@ class CopyAsMarkdown
     $result = [];
     $str = '';
     foreach ($columns as $column) {
-      if (!empty($str)) {
-        $str .= "|";
-      }
-      $str .= $column;
+      $str .= "|" . $column;
     }
     $result[] = $str;
 
     $str = '';
     for($i=0; $i<count($columns); $i++) {
-      if (!empty($str)) {
-        $str .= "|";
-      }
-      $str .= "---";
+      $str .= "|---";
     }
     $result[] = $str;
 
@@ -78,10 +72,7 @@ class CopyAsMarkdown
     foreach ($rows as $row) {
       $str = '';
       foreach ($row as $val) {
-        if (!empty($str)) {
-          $str .= "|";
-        }
-        $str .= str_replace(array("\n", "\r"), '', nl2br($val));
+        $str .= "|" . str_replace(array("\n", "\r"), '', nl2br($val));
       }
       $result[] = $str;
     }
