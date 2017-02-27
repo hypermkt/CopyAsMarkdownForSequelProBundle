@@ -18,6 +18,13 @@ class CopyAsMarkdownTest extends PHPUnit_Framework_TestCase
     $this->assertEquals($expected, $this->copyAsMarkdown->createHeaderRows(array('hoge', 'fuga')));
   }
 
+  public function testCreateHeaderRows_WhenHasOneColumn()
+  {
+    $expected = 'hoge|
+---|';
+    $this->assertEquals($expected, $this->copyAsMarkdown->createHeaderRows(array('hoge')));
+  }
+
 
   public function testCalculateColumnCount()
   {
@@ -31,6 +38,14 @@ d|e|f';
     $this->assertEquals($expected, $this->copyAsMarkdown->createDataRows(array(
           array('a', 'b', 'c'),
           array('d', 'e', 'f'),
+        )));
+  }
+
+  public function testCreateDataRows_WhenHasOneColumn()
+  {
+    $expected = 'a|';
+    $this->assertEquals($expected, $this->copyAsMarkdown->createDataRows(array(
+          array('a'),
         )));
   }
 
