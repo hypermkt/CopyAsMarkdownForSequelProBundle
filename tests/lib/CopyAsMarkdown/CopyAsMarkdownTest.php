@@ -25,7 +25,6 @@ class CopyAsMarkdownTest extends PHPUnit_Framework_TestCase
     $this->assertEquals($expected, $this->copyAsMarkdown->createHeaderRows(array('hoge')));
   }
 
-
   public function testCalculateColumnCount()
   {
     $this->assertEquals(3, $this->copyAsMarkdown->calculateColumnCount(array(array('a', 'b', 'c'))));
