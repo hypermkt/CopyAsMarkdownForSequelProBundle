@@ -2,8 +2,6 @@
 
 use PHPUnit\Framework\TestCase;
 
-require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/lib/CopyAsMarkdown/CopyAsMarkdown.php';
-
 class CopyAsMarkdownTest extends TestCase
 {
     protected $copyAsMarkdown;
