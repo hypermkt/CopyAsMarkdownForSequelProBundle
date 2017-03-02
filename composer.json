@@ -12,8 +12,6 @@
         "friendsofphp/php-cs-fixer": "^2.1"
     },
     "autoload": {
-      "psr-0": {
-          "CopyAsMarkdown\\": "lib"
-      }
+      "classmap": ["lib/"]
     }
 }
