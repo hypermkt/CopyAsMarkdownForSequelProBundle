@@ -1,17 +1,17 @@
 {
-    "name": "hypermkt/copy-as-markdown",
-    "authors": [
-        {
-            "name": "Makoto Chiba",
-            "email": "hypermkt@gmail.com"
-        }
-    ],
-    "require": {},
-    "require-dev": {
-      "phpunit/phpunit": "6.0.*",
-        "friendsofphp/php-cs-fixer": "^2.1"
-    },
-    "autoload": {
-      "classmap": ["lib/"]
+  "name": "hypermkt/copy-as-markdown",
+  "authors": [
+    {
+      "name": "Makoto Chiba",
+      "email": "hypermkt@gmail.com"
     }
+  ],
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^7",
+    "friendsofphp/php-cs-fixer": "^2.1"
+  },
+  "autoload": {
+    "classmap": ["lib/"]
+  }
 }
