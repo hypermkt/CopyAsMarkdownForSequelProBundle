@@ -1,4 +1,4 @@
-#!/usr/bin/php
+#!/opt/homebrew/bin/php
 <?php
 
 if (!isset($_ENV['TEST_ENV'])) {
