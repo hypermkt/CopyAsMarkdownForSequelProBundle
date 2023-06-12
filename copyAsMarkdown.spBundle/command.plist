@@ -5,7 +5,7 @@
 	<key>category</key>
 	<string>copyAs</string>
 	<key>command</key>
-	<string>#!/usr/bin/php
+	<string>#!/opt/homebrew/bin/php
 &lt;?php
 
 if (!isset($_ENV['TEST_ENV'])) {
