@@ -1,12 +1,15 @@
 <?php
 
+namespace lib\CopyAsMarkdown;
+
+use CopyAsMarkdown;
 use PHPUnit\Framework\TestCase;
 
 class CopyAsMarkdownTest extends TestCase
 {
-    protected $copyAsMarkdown;
+    protected CopyAsMarkdownExtended $copyAsMarkdown;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->copyAsMarkdown = new CopyAsMarkdownExtended('hoge');
     }
