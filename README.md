@@ -1,4 +1,4 @@
-# Markdown Output and Copier For Sequel Pro Bundle [![Build Status](https://travis-ci.org/hypermkt/CopyAsMarkdownForSequelProBundle.svg?branch=master)](https://travis-ci.org/hypermkt/CopyAsMarkdownForSequelProBundle)
+# Markdown Output and Copier For Sequel Pro Bundle [![CircleCI](https://dl.circleci.com/status-badge/img/gh/hypermkt/CopyAsMarkdownForSequelProBundle/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/hypermkt/CopyAsMarkdownForSequelProBundle/tree/master)
 
 Copy selected rows as Markdown. It's so easy to paste in GitHub issue.
 
